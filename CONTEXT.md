@@ -1,6 +1,7 @@
 # claude_blockcrafterstv_website
 
 ## Описание: лендинг для Minecraft-сервера BlockCraftersTV
+## Версия: 1.0.0.0
 ## Статус: 🟢 Готов
 ## Последнее обновление: 2026-02-19 | Home PC
 
