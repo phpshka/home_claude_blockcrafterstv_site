@@ -25,6 +25,10 @@ const THEMES = {
     variant4: {
         name: 'Minecraft Green Forest',
         css: 'style-variant4-minecraft-green.css'
+    },
+    variant5: {
+        name: 'Sunny Voxel',
+        css: 'style-variant5-sunny-voxel.css'
     }
 };
 
