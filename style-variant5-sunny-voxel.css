@@ -194,3 +194,83 @@ h1, h2, h3, .section-title, .feature-title, .stat-value, .step-number, .navbar-b
         border-top: none;
     }
 }
+
+/* === Hero — sky → grass → dirt vertical gradient === */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem 4rem;
+    background: linear-gradient(180deg,
+        var(--sky-deep)  0%,
+        var(--sky)       35%,
+        var(--sky-light) 55%,
+        var(--grass)     55%,
+        var(--grass-dark) 72%,
+        var(--wood)      72%,
+        var(--wood-dark) 88%,
+        var(--earth)     100%);
+    /* Neutralize base style.css:285 — fixed attachment breaks our gradient */
+    background-attachment: scroll;
+    /* Disable JS-parallax (script.js:319) — it shifts the hero and breaks fixed gradient */
+    transform: none !important;
+    overflow: hidden;
+}
+
+/* Override style.css' hero pseudo-elements (radial gradient overlays) — we paint our own in Task 6 */
+.hero::before,
+.hero::after {
+    background: none;
+    animation: none;
+}
+
+/* Content — must stack above future ::before decorations.
+   Resets base style.css:315-327 (rgba bg, border-radius, backdrop-filter, box-shadow, neon border). */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem;
+    max-width: 900px;
+    background: none;
+    border: none;
+    border-radius: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+}
+
+/* Reset base style.css:331 fadeInUp animation */
+.hero-logo {
+    margin-bottom: 1.5rem;
+    animation: none;
+}
+
+/* Reset base style.css:334-347: Orbitron, gradient text-fill, glow-text animation, drop-shadow filter */
+.hero-title {
+    font-family: 'Pixelify Sans', monospace;
+    font-weight: 700;
+    font-size: clamp(28px, 6vw, 48px);
+    color: var(--cloud);
+    background: none;
+    -webkit-text-fill-color: var(--cloud);
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    filter: none;
+    animation: none;
+    text-shadow: 4px 4px 0 var(--shadow-grass);
+    letter-spacing: 2px;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+}
+
+.hero-subtitle {
+    font-family: 'Pixelify Sans', monospace;
+    font-weight: 400;
+    font-size: clamp(16px, 2.5vw, 22px);
+    color: var(--paper);
+    text-shadow: 2px 2px 0 var(--shadow-grass);
+    letter-spacing: 0.5px;
+}
