@@ -112,6 +112,9 @@ h1, h2, h3, .section-title, .feature-title, .stat-value, .step-number, .navbar-b
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    background: transparent;
+    border: none;
+    padding: 0;
 }
 
 .navbar-players svg {
@@ -128,6 +131,7 @@ h1, h2, h3, .section-title, .feature-title, .stat-value, .step-number, .navbar-b
     border: 2px solid var(--cloud);
     border-radius: 0 !important;
     box-shadow: 0 0 6px var(--grass);
+    animation: none;
 }
 
 .status-dot.online { background: var(--grass); }
