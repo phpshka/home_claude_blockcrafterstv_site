@@ -172,6 +172,7 @@ h1, h2, h3, .section-title, .feature-title, .stat-value, .step-number, .navbar-b
 }
 
 .theme-select:hover {
+    background: var(--paper);
     box-shadow: 5px 5px 0 var(--shadow-wood);
     transform: translate(-1px, -1px);
 }
@@ -185,4 +186,11 @@ h1, h2, h3, .section-title, .feature-title, .stat-value, .step-number, .navbar-b
     background: var(--paper);
     color: var(--text-dark);
     font-weight: 400;
+}
+
+/* === Mobile theme-switcher overrides === */
+@media (max-width: 768px) {
+    .theme-switcher {
+        border-top: none;
+    }
 }
