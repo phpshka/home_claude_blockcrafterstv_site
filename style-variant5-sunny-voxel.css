@@ -2,3 +2,77 @@
  * Daytime voxel aesthetic — bright sky, grass, friendly creeper.
  * See spec: docs/superpowers/specs/2026-04-26-sunny-voxel-theme-design.md
  */
+
+/* Import Fonts — Pixelify Sans (Latin + Cyrillic) */
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;700&display=swap');
+
+/* CSS Variables - Sunny Voxel Daytime */
+:root {
+    /* Sky */
+    --sky-deep:    #6cb5e8;
+    --sky:         #87ceeb;
+    --sky-light:   #b3e0f7;
+    --cloud:       #ffffff;
+    /* Grass */
+    --grass:       #5cb02e;
+    --grass-dark:  #4a8f24;
+    --grass-shadow:#3a6f1c;
+    /* Sun & wood */
+    --sun:         #ffe066;
+    --wood:        #6b3e1a;
+    --wood-dark:   #5a341a;
+    --earth:       #463017;
+    /* Surfaces */
+    --paper:       #fffacd;
+    --text-dark:   #2d1810;
+    /* Offset shadows */
+    --shadow-grass:#2d5a17;
+    --shadow-wood: #1a3a0a;
+
+    /* Re-bind to existing variant naming convention */
+    --primary-color:   var(--grass);
+    --primary-dark:    var(--grass-dark);
+    --primary-light:   var(--grass);
+    --accent-color:    var(--sun);
+    --accent-dark:     var(--wood);
+    --secondary-color: var(--wood);
+    --bg-black:        var(--paper);
+    --bg-dark:         var(--paper);
+    --bg-darker:       var(--cloud);
+    --bg-card:         var(--cloud);
+    --bg-card-hover:   var(--paper);
+    --text-primary:    var(--text-dark);
+    --text-secondary:  var(--wood);
+    --text-muted:      #888;
+    --border-color:    var(--wood);
+}
+
+/* Body — paper background, Pixelify Sans, prevent dark style.css bg from showing through */
+body {
+    font-family: 'Pixelify Sans', 'Courier New', monospace;
+    background: var(--paper);
+    background-image: repeating-linear-gradient(45deg,
+        transparent 0 16px,
+        rgba(107, 62, 26, 0.04) 16px 17px);
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+/* All corners are square — voxel aesthetic */
+* {
+    border-radius: 0 !important;
+}
+
+/* Headings — bold pixel weight */
+h1, h2, h3, .section-title, .feature-title, .stat-value, .step-number, .navbar-brand {
+    font-family: 'Pixelify Sans', 'Courier New', monospace;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Section title — used by Features/Connect/Social headings */
+.section-title {
+    font-size: clamp(20px, 3vw, 28px);
+    color: var(--shadow-grass);
+    text-shadow: 3px 3px 0 var(--cloud);
+}
