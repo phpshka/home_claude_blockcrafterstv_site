@@ -198,6 +198,7 @@ h1, h2, h3, .section-title, .feature-title, .stat-value, .step-number, .navbar-b
 /* === Hero — sky → grass → dirt vertical gradient === */
 .hero {
     position: relative;
+    height: auto;          /* reset base style.css:279 height:100vh */
     min-height: 100vh;
     display: flex;
     align-items: center;
