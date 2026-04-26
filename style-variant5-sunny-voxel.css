@@ -139,3 +139,50 @@ h1, h2, h3, .section-title, .feature-title, .stat-value, .step-number, .navbar-b
 
 .status-text.online { color: var(--cloud); }
 .status-text.offline { color: #ffb3b3; }
+
+/* === Theme Switcher === */
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.theme-label {
+    font-family: 'Pixelify Sans', monospace;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--cloud);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.theme-select {
+    font-family: 'Pixelify Sans', monospace;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--text-dark);
+    background: var(--paper);
+    border: 3px solid var(--wood);
+    border-radius: 0 !important;
+    padding: 0.4rem 0.75rem;
+    box-shadow: 3px 3px 0 var(--shadow-wood);
+    cursor: pointer;
+    transition: transform 0.12s steps(2, end), box-shadow 0.12s steps(2, end);
+    outline: none;
+}
+
+.theme-select:hover {
+    box-shadow: 5px 5px 0 var(--shadow-wood);
+    transform: translate(-1px, -1px);
+}
+
+.theme-select:focus {
+    border-color: var(--shadow-grass);
+    box-shadow: 5px 5px 0 var(--shadow-grass);
+}
+
+.theme-select option {
+    background: var(--paper);
+    color: var(--text-dark);
+    font-weight: 400;
+}
