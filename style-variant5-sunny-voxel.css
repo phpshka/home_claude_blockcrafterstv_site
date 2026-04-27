@@ -267,10 +267,6 @@ h1, h2, h3, .section-title, .feature-title, .stat-value, .step-number, .navbar-b
     animation: none;
 }
 
-/* Mobile: hide decorations to keep IP-block clean */
-@media (max-width: 768px) {
-    .hero::before { display: none; }
-}
 
 /* Content — must stack above future ::before decorations.
    Resets base style.css:315-327 (rgba bg, border-radius, backdrop-filter, box-shadow, neon border). */
@@ -949,4 +945,137 @@ h1, h2, h3, .section-title, .feature-title, .stat-value, .step-number, .navbar-b
     font-size: 14px;
     color: var(--paper);
     opacity: 0.8;
+}
+
+/* === Responsive (mobile <= 768px) ===
+   Consolidates mobile cascade leaks from base style.css:1000-1256.
+   Includes deferred Task 7 backlog (.hero-ip-container/.ip-copy-btn). */
+@media (max-width: 768px) {
+    /* Hide hero pixel decorations to keep IP-block clean */
+    .hero::before { display: none; }
+
+    /* Navbar — base uses grid layout on mobile; force flex wrap and center */
+    .navbar {
+        padding: 0.75rem 1rem;
+    }
+
+    .navbar-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .navbar-brand {
+        font-size: 14px;
+    }
+
+    /* Reset base style.css:1044-1050: cyan border-top leak, grid placement */
+    .theme-switcher {
+        order: 2;
+        grid-column: auto;
+        grid-row: auto;
+        width: 100%;
+        justify-content: center;
+        border-top: none;
+        padding-top: 0;
+    }
+
+    .theme-label {
+        display: none;
+    }
+
+    .theme-select {
+        flex: 1;
+        max-width: 300px;
+    }
+
+    .navbar-info {
+        order: 3;
+        grid-column: auto;
+        grid-row: auto;
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* Hero — reset base style.css:1067-1071 (padding, margin, border-radius) */
+    .hero {
+        padding: 6rem 1rem 3rem;
+        min-height: 90vh;
+    }
+
+    .hero-content {
+        padding: 1.5rem;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .hero::after {
+        bottom: 22%;
+    }
+
+    /* Reset base style.css:1087-1090: padding 1rem 1.2rem, gap 0.8rem
+       (deferred Task 7 backlog — variant5 wants seamless flat IP container) */
+    .hero-ip-container {
+        padding: 0;
+        gap: 0;
+    }
+
+    /* Reset base style.css:1100-1105: padding override, width: 100%, justify-content
+       (deferred Task 7 backlog — variant5 wants pill button, not full-width) */
+    .ip-copy-btn {
+        width: auto;
+    }
+
+    .stats-section .stat-card {
+        padding: 1.25rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .connect-card {
+        padding: 1.75rem 1rem;
+    }
+
+    /* Reset base style.css:710+ connect-btn full-width on mobile (if applied) */
+    .connect-btn {
+        width: auto;
+    }
+
+    .step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-content {
+        gap: 1rem;
+    }
+}
+
+/* === Prefers-reduced-motion (a11y) ===
+   Disable hover transforms/transitions/animations for users who prefer
+   reduced motion (vestibular sensitivity). */
+@media (prefers-reduced-motion: reduce) {
+    .stats-section .stat-card,
+    .feature-card,
+    .social-card,
+    .ip-copy-btn,
+    .connect-btn,
+    .theme-select,
+    .footer-links a {
+        transition: none !important;
+        transform: none !important;
+        animation: none !important;
+    }
+
+    .stats-section .stat-card:hover,
+    .feature-card:hover,
+    .social-card:hover,
+    .ip-copy-btn:hover,
+    .connect-btn:hover {
+        transform: none !important;
+    }
 }
