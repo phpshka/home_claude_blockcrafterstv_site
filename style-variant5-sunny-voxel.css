@@ -75,6 +75,11 @@ h1, h2, h3, .section-title, .feature-title, .stat-value, .step-number, .navbar-b
     font-size: clamp(20px, 3vw, 28px);
     color: var(--shadow-grass);
     text-shadow: 3px 3px 0 var(--cloud);
+    background: none;
+    -webkit-text-fill-color: var(--shadow-grass);
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    filter: none;
 }
 
 /* === Navbar === */
