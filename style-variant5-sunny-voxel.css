@@ -431,3 +431,135 @@ h1, h2, h3, .section-title, .feature-title, .stat-value, .step-number, .navbar-b
     stroke: var(--cloud);
     filter: drop-shadow(2px 2px 0 var(--shadow-grass));
 }
+
+/* === Stats Section === */
+.stats-section {
+    background: var(--paper);
+    background-image: repeating-linear-gradient(45deg,
+        transparent 0 12px,
+        rgba(107, 62, 26, 0.06) 12px 13px);
+    padding: 3rem 1.5rem;
+    border-top: 6px solid var(--wood);
+    box-shadow: 0 6px 0 var(--shadow-wood);
+    margin-top: 0;
+    /* Cascade resets — base style.css set grid layout + z-index */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    position: relative;
+    z-index: auto;
+}
+
+.stats-section .stat-card {
+    background: var(--cloud);
+    border: 3px solid var(--wood);
+    border-radius: 0 !important;
+    box-shadow: 5px 5px 0 var(--shadow-wood);
+    padding: 1.5rem;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    transition: transform 0.15s steps(3, end), box-shadow 0.15s steps(3, end);
+    image-rendering: pixelated;
+    /* Cascade resets — base .stat-card flex layout w/ icon-on-left */
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.stats-section .stat-card:hover {
+    box-shadow: 7px 7px 0 var(--shadow-wood);
+    transform: translate(-2px, -2px);
+    /* Reset base hover border-color leak */
+    border-color: var(--wood);
+}
+
+.stats-section .stat-icon {
+    color: var(--shadow-grass);
+    image-rendering: pixelated;
+    margin-bottom: 0.75rem;
+    /* Reset base neon drop-shadow + transition */
+    filter: none;
+    transition: none;
+}
+
+.stats-section .stat-icon svg {
+    stroke: var(--shadow-grass);
+    filter: drop-shadow(2px 2px 0 var(--grass));
+}
+
+/* Reset base ".stat-card:hover .stat-icon" — neon accent color + glow */
+.stats-section .stat-card:hover .stat-icon {
+    color: var(--shadow-grass);
+    filter: none;
+}
+
+.stats-section .stat-card:hover .stat-icon svg {
+    stroke: var(--shadow-grass);
+    filter: drop-shadow(2px 2px 0 var(--grass));
+}
+
+.stats-section .stat-content {
+    text-align: left;
+    flex: 1;
+}
+
+.stats-section .stat-label {
+    font-family: 'Pixelify Sans', monospace;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--wood);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.stats-section .stat-value {
+    font-family: 'Pixelify Sans', monospace;
+    font-weight: 700;
+    font-size: clamp(22px, 3vw, 32px);
+    color: var(--shadow-grass);
+    line-height: 1;
+}
+
+.stats-section .count-number {
+    color: var(--shadow-grass);
+}
+.stats-section .count-separator { color: var(--text-muted); margin: 0 0.2rem; }
+.stats-section .count-max { color: var(--text-muted); font-size: 0.6em; }
+
+.stats-section .status-text {
+    font-family: 'Pixelify Sans', monospace;
+    font-weight: 700;
+    font-size: clamp(16px, 2.2vw, 22px);
+    color: var(--shadow-grass);
+}
+
+/* Reset base ".status-text.online/.offline" — neon text-shadow + cyan/red colors */
+.stats-section .status-text.online {
+    color: var(--shadow-grass);
+    text-shadow: none;
+    font-weight: 700;
+}
+
+.stats-section .status-text.offline {
+    color: var(--wood);
+    text-shadow: none;
+    font-weight: 700;
+}
+
+/* Reset base ".status-dot.online/.offline" — neon pulsing animation + glow */
+.stats-section .status-dot {
+    animation: none;
+    border: 2px solid var(--shadow-grass);
+    border-radius: 0;
+}
+
+.stats-section .status-dot.online {
+    background-color: var(--grass);
+    box-shadow: 2px 2px 0 var(--shadow-grass);
+}
+
+.stats-section .status-dot.offline {
+    background-color: var(--wood);
+    box-shadow: 2px 2px 0 var(--shadow-wood);
+}
