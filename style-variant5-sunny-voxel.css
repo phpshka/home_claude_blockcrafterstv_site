@@ -563,3 +563,87 @@ h1, h2, h3, .section-title, .feature-title, .stat-value, .step-number, .navbar-b
     background-color: var(--wood);
     box-shadow: 2px 2px 0 var(--shadow-wood);
 }
+
+/* === Features Section === */
+.features-section {
+    background: var(--paper);
+    padding: 4rem 1.5rem;
+    margin-top: 0;
+    /* Reset base — position/z-index stacking from neon variant */
+    position: static;
+    z-index: auto;
+}
+
+.features-section .section-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: var(--cloud);
+    border: 3px solid var(--wood);
+    border-radius: 0 !important;
+    box-shadow: 5px 5px 0 var(--shadow-wood);
+    padding: 1.75rem 1.25rem;
+    text-align: center;
+    transition: transform 0.15s steps(3, end), box-shadow 0.15s steps(3, end);
+    image-rendering: pixelated;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+.feature-card:hover {
+    box-shadow: 7px 7px 0 var(--shadow-wood);
+    transform: translate(-2px, -2px);
+    /* Reset base hover — neon gradient bg + accent border-color */
+    background: var(--cloud);
+    border-color: var(--wood);
+}
+
+.feature-icon {
+    color: var(--shadow-grass);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    image-rendering: pixelated;
+    /* Reset base — neon drop-shadow filter + transition */
+    filter: none;
+    transition: none;
+}
+
+.feature-icon svg {
+    stroke: var(--shadow-grass);
+    filter: drop-shadow(2px 2px 0 var(--grass));
+}
+
+/* Reset base ".feature-card:hover .feature-icon" — neon color shift + drop-shadow + scale/rotate */
+.feature-card:hover .feature-icon {
+    color: var(--shadow-grass);
+    filter: none;
+    transform: none;
+}
+
+.feature-title {
+    font-family: 'Pixelify Sans', monospace;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--shadow-grass);
+    margin-bottom: 0.6rem;
+    letter-spacing: 1px;
+}
+
+.feature-text {
+    font-family: 'Pixelify Sans', monospace;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text-dark);
+    line-height: 1.5;
+}
