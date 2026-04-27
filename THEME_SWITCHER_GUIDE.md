@@ -10,38 +10,45 @@
 
 ## 🎯 Доступные темы
 
-### 1. 🟣 Dark Gaming Premium
+### 1. ☀️ Sunny Voxel (по умолчанию)
+**Файлы:** `style-variant5-sunny-voxel.css`
+
+- **Цвета:** Небо #87ceeb, трава #5cb02e, солнце #ffe066, дерево #6b3e1a, бумага #fffacd
+- **Стиль:** Дневной voxel-Minecraft, бодрый
+- **Особенности:**
+  - Пиксельные SVG-декорации (солнце, облака, дерево, крипер)
+  - Полоса травы между травой и землёй
+  - Без border-radius, смещённые блочные тени
+  - Шрифт: Pixelify Sans 400/500/700 (Latin + Cyrillic)
+  - prefers-reduced-motion: hover-анимации отключаются
+
+### 2. 🟣 Dark Gaming Premium
 **Файлы:** `style-variant1-dark-gaming.css`
 
 - **Цвета:** Фиолетовый (#8b5cf6) + Оранжевый (#f59e0b)
-- **Стиль:** Премиум игровой дизайн
-- **Особенности:**
-  - Элегантные градиенты
-  - Мягкие свечения
-  - Профессиональный вид
-  - Шрифт: Inter для заголовков
+- **Стиль:** Премиум игровой
+- **Шрифт:** Inter
 
-### 2. 🔵 Neon Cyberpunk (по умолчанию)
-**Файлы:** `style-variant2-neon-cyberpunk.css`
+### 3. 🔵 Neon Cyberpunk
+**Файлы:** `style-variant2-neon-cyberpunk.css`, базовый `style.css`
 
 - **Цвета:** Неоновый Циан (#00f8ff) + Магента (#ff00ff)
 - **Стиль:** Киберпанк с неоновыми эффектами
-- **Особенности:**
-  - Яркие неоновые свечения
-  - Двойные тени
-  - Футуристичный дизайн
-  - Шрифт: Orbitron для заголовков
+- **Шрифт:** Orbitron
 
-### 3. 🟡 Minecraft Professional
+### 4. 🟡 Minecraft Professional
 **Файлы:** `style-variant3-minecraft-pro.css`
 
 - **Цвета:** Золотой (#fbbf24) + Изумрудный (#10b981)
-- **Стиль:** Minecraft с профессиональным уклоном
-- **Особенности:**
-  - Пиксельные элементы (Press Start 2P)
-  - 3D тени (box-shadow смещения)
-  - Золотое свечение
-  - Блочный дизайн
+- **Стиль:** Minecraft, тёмный
+- **Шрифт:** Press Start 2P + Rubik
+
+### 5. 🟢 Minecraft Green Forest
+**Файлы:** `style-variant4-minecraft-green.css`
+
+- **Цвета:** Зелёный (#22c55e) + Лайм (#84cc16)
+- **Стиль:** Тёмный лесной MC
+- **Шрифт:** Press Start 2P + Poppins
 
 ## 🔧 Как использовать
 
@@ -202,9 +209,11 @@ localStorage.setItem('selectedTheme', 'variant1');
 
 | Тема | Размер CSS | Шрифты | Анимации |
 |------|-----------|--------|----------|
-| Variant 1 | ~17KB | Inter, Rajdhani | Умеренные |
-| Variant 2 | ~20KB | Orbitron, Rajdhani | Интенсивные |
-| Variant 3 | ~19KB | Press Start 2P, Rubik | Умеренные |
+| Sunny Voxel | ~28KB | Pixelify Sans (Cyrillic) | Stepped (hover) |
+| Variant 1 (Dark Gaming) | ~17KB | Inter, Rajdhani | Умеренные |
+| Variant 2 (Cyberpunk) | ~20KB | Orbitron, Rajdhani | Интенсивные |
+| Variant 3 (Minecraft Pro) | ~19KB | Press Start 2P, Rubik | Умеренные |
+| Variant 4 (Green Forest) | ~19KB | Press Start 2P, Poppins | Умеренные |
 
 ## 🚀 Будущие улучшения
 
