@@ -63,7 +63,7 @@ function initThemeSwitcher() {
     }
 
     // Load saved theme from localStorage or use default
-    const savedTheme = localStorage.getItem('selectedTheme') || 'variant2';
+    const savedTheme = localStorage.getItem('selectedTheme') || 'variant5';
     themeSelect.value = savedTheme;
     loadTheme(savedTheme);
 
