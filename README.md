@@ -2,7 +2,7 @@
 
 Современная лендинговая страница для Minecraft сервера BlockCraftersTV в стиле MCServer-Web-Template с размытым фоном и анимациями.
 
-**Версия:** 1.1.0.0
+**Версия:** 1.1.1.0
 
 ## Темы оформления
 
@@ -10,7 +10,7 @@
 
 | # | Тема | Файл | Описание |
 |---|------|------|----------|
-| ☀️ | **Sunny Voxel (default)** | `style-variant5-sunny-voxel.css` | Дневной voxel-Minecraft: небо, трава, дерево, крипер. Pixelify Sans 400/700 |
+| ☀️ | **Sunny Voxel (default)** | `style-variant5-sunny-voxel.css` | Дневной voxel-Minecraft: небо, трава, дерево, крипер. Press Start 2P + Russo One + Rubik |
 | 🟣 | Dark Gaming Premium | `style-variant1-dark-gaming.css` | Фиолет + оранжевый, премиум-игровой |
 | 🔵 | Neon Cyberpunk | `style-variant2-neon-cyberpunk.css` | Циан + магента неон, киберпанк |
 | 🟡 | Minecraft Professional | `style-variant3-minecraft-pro.css` | Золото + изумруд, тёмный MC |
@@ -125,7 +125,7 @@ const SERVER_CONFIG = {
 - HTML5
 - CSS3 (Flexbox, Grid, Animations)
 - JavaScript (ES6+)
-- Google Fonts: Pixelify Sans (default), Press Start 2P, Orbitron, Rajdhani, Rubik, Poppins, Inter, Space Mono
+- Google Fonts: Press Start 2P + Russo One + Rubik (Sunny Voxel default), Orbitron, Rajdhani, Poppins, Inter, Space Mono
 
 ## Поддержка браузеров
 

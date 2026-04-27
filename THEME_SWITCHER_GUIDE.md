@@ -19,7 +19,7 @@
   - Пиксельные SVG-декорации (солнце, облака, дерево, крипер)
   - Полоса травы между травой и землёй
   - Без border-radius, смещённые блочные тени
-  - Шрифт: Pixelify Sans 400/500/700 (Latin + Cyrillic)
+  - Шрифты: Press Start 2P (латиница/числа) + Russo One (русские заголовки) + Rubik (body) — все с поддержкой кириллицы
   - prefers-reduced-motion: hover-анимации отключаются
 
 ### 2. 🟣 Dark Gaming Premium
@@ -209,7 +209,7 @@ localStorage.setItem('selectedTheme', 'variant1');
 
 | Тема | Размер CSS | Шрифты | Анимации |
 |------|-----------|--------|----------|
-| Sunny Voxel | ~28KB | Pixelify Sans (Cyrillic) | Stepped (hover) |
+| Sunny Voxel | ~28KB | Press Start 2P + Russo One + Rubik | Stepped (hover) |
 | Variant 1 (Dark Gaming) | ~17KB | Inter, Rajdhani | Умеренные |
 | Variant 2 (Cyberpunk) | ~20KB | Orbitron, Rajdhani | Интенсивные |
 | Variant 3 (Minecraft Pro) | ~19KB | Press Start 2P, Rubik | Умеренные |

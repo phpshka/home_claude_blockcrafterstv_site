@@ -3,7 +3,7 @@
 ## ☀️ Sunny Voxel (default, v1.1.0.0+)
 
 Файл: `style-variant5-sunny-voxel.css`
-Шрифт: Pixelify Sans (с поддержкой кириллицы)
+Шрифты: Press Start 2P (латиница) + Russo One (кириллица) + Rubik (body)
 Палитра: небо #87ceeb · трава #5cb02e · солнце #ffe066 · дерево #6b3e1a · бумага #fffacd
 
 Особенности:
