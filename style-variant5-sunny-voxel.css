@@ -762,3 +762,91 @@ h1, h2, h3, .section-title, .feature-title, .stat-value, .step-number, .navbar-b
     box-shadow: 2px 2px 0 var(--shadow-wood);
     transform: translate(2px, 2px);
 }
+
+/* === Social Section === */
+.social-section {
+    background: var(--paper);
+    padding: 4rem 1.5rem;
+}
+
+.social-section .section-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.social-card {
+    background: var(--cloud);
+    border: 3px solid var(--wood);
+    border-radius: 0 !important;
+    box-shadow: 5px 5px 0 var(--shadow-wood);
+    padding: 1.75rem 1.25rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: transform 0.15s steps(3, end), box-shadow 0.15s steps(3, end);
+    image-rendering: pixelated;
+    display: block;
+    backdrop-filter: none;
+}
+
+.social-card:hover {
+    box-shadow: 7px 7px 0 var(--shadow-wood);
+    transform: translate(-2px, -2px);
+}
+
+/* Cascade-leak resets: base brand hovers override border-color + colored glow box-shadow */
+.social-card.youtube,
+.social-card.tiktok,
+.social-card.telegram {
+    border-color: var(--wood);
+}
+
+.social-card.youtube:hover,
+.social-card.tiktok:hover,
+.social-card.telegram:hover {
+    border-color: var(--wood);
+    box-shadow: 7px 7px 0 var(--shadow-wood);
+}
+
+/* Reset base color leak on .social-icon (base sets color: brand for currentColor SVGs) */
+.social-card.youtube .social-icon,
+.social-card.tiktok .social-icon,
+.social-card.telegram .social-icon {
+    color: inherit;
+}
+
+.social-icon {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Brand color = single colorful spot per card */
+.social-card.youtube .social-icon svg { fill: #ff0000; filter: drop-shadow(2px 2px 0 var(--shadow-wood)); }
+.social-card.tiktok .social-icon svg  { fill: #000000; filter: drop-shadow(2px 2px 0 var(--shadow-wood)); }
+.social-card.telegram .social-icon svg { fill: #229ED9; filter: drop-shadow(2px 2px 0 var(--shadow-wood)); }
+
+.social-title {
+    font-family: 'Pixelify Sans', monospace;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--shadow-grass);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.4rem;
+}
+
+.social-text {
+    font-family: 'Pixelify Sans', monospace;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--text-dark);
+}
